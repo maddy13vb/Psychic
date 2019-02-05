@@ -26,23 +26,24 @@
             var losses = 0;
             var guesses = 0;
             var left = 0;
+
             //math.floor
             //on.key
             //user guess// 
-            var userGuess = document.getElementById("user-text");
+
             document.onkeyup = function (event) {
-                userGuess.textContent = event.key;
-            };
-            if ((userGuess === letters)) {
-                alert("You guessed: " + userGuess);
+                var userGuess = event.key;
 
-            };
-            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
-            if ((computerGuess === letters)) {
-                alert(" Computer guessed: " + userGuess);
+                var computerGuess = letters[Math.floor(Math.random() * letters.length)];
 
+                if ((userGuess === computerGuess)) {
+                    wins++;
+                }
+                else if (userGuess !== computerGuess) {
+                    losses++;
+                    guesses++;
+                }
             };
-
         </script>
     </container>
 </body>
