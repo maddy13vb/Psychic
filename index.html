@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <script src="assets/javascript/game.js">
+    </script>
+    <title>Pyschic- Guess the letter</title>
 </head>
 
 <body>
@@ -20,31 +23,6 @@
             <p>Guesses Left:</p>
             <p>Your guesses so far:</p>
         </div>
-        <script type="text/javascript">
-            var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-            var wins = 0;
-            var losses = 0;
-            var guesses = 0;
-            var left = 0;
-
-            //math.floor
-            //on.key
-            //user guess// 
-
-            document.onkeyup = function (event) {
-                var userGuess = event.key;
-
-                var computerGuess = letters[Math.floor(Math.random() * letters.length)];
-
-                if ((userGuess === computerGuess)) {
-                    wins++;
-                }
-                else if (userGuess !== computerGuess) {
-                    losses++;
-                    guesses++;
-                }
-            };
-        </script>
     </container>
 </body>
 
